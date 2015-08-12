@@ -1,0 +1,229 @@
+@charset"UTF-8";
+ body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.fullPage {
+    background: purple;
+    /*  position:fixed;  */
+    top: 0;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+}
+.logo {
+    height: 100px;
+    float: left;
+}
+ul {
+    list-style: none;
+    padding: 5% 0;
+    width: 80%;
+    margin: 0 25%;
+}
+.fullPage ul {
+    margin: 2%;
+    width: 80%;
+    float: right;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 20% 0;
+    width: 30%;
+    text-align: center;
+}
+.fullPage a {
+    padding: 0 5%;
+    font-size: 200%;
+}
+h1 {
+    color: purple;
+    font-size: 300%;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    font-size: 175%;
+}
+h3 {
+    text-align: center;
+}
+.hello {
+    width: 100%;
+}
+p {
+    margin: 5% 10%;
+    font-size: 150%;
+    line-height: 160%;
+}
+.section {
+    padding: 5%;
+}
+#about, #school {
+    background: black;
+}
+#contact, #work {
+    background: white;
+}
+#about p, #school p, #about h2, #school h2 {
+    color:white;
+}
+footer {
+    background: purple;
+    height: 50px;
+}
+.active {
+    color: black;
+}
+.group:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+/* iPads (portrait and landscape) ----------- */
+ @media screen and (max-width : 768px) {
+}
+/* Smartphones (portrait and landscape) ----------- */
+ @media screen and (max-width : 480px) {
+    .fullPage {
+        display: none;
+    }
+    .smallNav {
+        position: absolute;
+        width: 100px;
+        right: 0;
+        background: purple;
+        margin: 65% 0 0 0;
+        display: none;
+        border-radius: 5px;
+    }
+    .smallNav a {
+        display: block;
+    }
+    p {
+        margin: 5% 11%;
+        font-size: 110%;
+        line-height: 160%;
+        text-align:justify;
+    }
+    h1 {
+        font-size: 250%;
+        padding: 5% 0 0 0;
+        margin: 20% 2% 2% 2%;
+    }
+    h2 {
+        font: 150%;
+    }
+    h3 {
+        color: white;
+        font-size: 150%;
+        margin: 0;
+        padding: 2.5% 0 0 0;
+    }
+    .section {
+        padding: 2%;
+    }
+    /*burger menu css*/
+    .btn {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        right:15px;
+        top:15px;
+        background: purple;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        border-radius: 5px;
+    }
+    .getBig {
+        width: 100px;
+        height: 75px;
+        /*    right: 0px;   */
+    }
+    .btn .icon {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        top: 30px;
+        background-color: white;
+        border-radius: 4px;
+        right: 15px;
+    }
+    .btn .special.icon {
+        background-color:purple;
+        width:20px;
+    }
+    .getBig .centerBurger {
+        left: 32.5px;
+    }
+    .btn .icon:before {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        content:"";
+        top: -10px;
+        border-radius: 4px;
+    }
+    .btn .special.icon:before {
+        background-color: purple;
+        width:20px;
+    }
+    .btn .icon:after {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        content:"";
+        top: 10px;
+        border-radius: 4px;
+    }
+    .btn .special.icon:after {
+        background-color:purple;
+        width:20px;
+    }
+    .btn.open .icon {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        background: transparent;
+    }
+    .btn.open .icon:before {
+        -ms-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        -moz-transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        -o-transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+    }
+    .btn.open .icon:after {
+        -ms-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        -moz-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        -o-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+    }
+    .btn:hover, a {
+        cursor: pointer;
+    }
+}
